@@ -26,6 +26,13 @@ body {
 
 
 /** navigation color **/
+
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: 50px;
+    }
+}
 .navbar-default { 
   background-color: #012a47;
   border-color: #012a47;
@@ -268,16 +275,22 @@ main
 
 
 /** Intro Sliders **/
+.slick-slide {
+    outline: none !important;
+}
+
 
 .into-wrapper
 {
     padding: 5% 3% 3% 3%;
 }
-@media (max-width: 770px){
-.into-wrapper
-{
-    padding: 8% 3% 3% 3%;
-}
+
+@media (max-width: 770px) {
+    .into-wrapper {
+        /* padding: 8% 3% 3% 3%; */
+        min-height: 100vh;
+        padding: 22% 3% 3% 3%;
+    }
 }
 .sliderdesc
 {
@@ -286,7 +299,7 @@ main
 
 .titleo, .titled, .titlei, .titlev, .titleb
 {
-  font-size: 3em;
+  font-size: 2em;
 }
 .titleo
 {
