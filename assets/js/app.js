@@ -1,7 +1,14 @@
 var Naanal= angular.module('Naanal', ['ui.router', 'slick', 'NaanalControllers', 'ngMap']);
 
- Naanal.config(function($stateProvider, $urlRouterProvider){
-      
+ Naanal.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function($stateProvider, $urlRouterProvider, $locationProvider){
+
+	 //if(window.history && window.history.pushState){
+		// $locationProvider.html5Mode({
+		//	 enabled: true,
+		//	 requireBase: false
+		// });
+	 //}
+
       // For any unmatched url, send to /route1
       $urlRouterProvider.otherwise("/");
       
@@ -51,4 +58,4 @@ var Naanal= angular.module('Naanal', ['ui.router', 'slick', 'NaanalControllers',
 		  url: "/demo",
 		  templateUrl: "views/demos/demo.html"
 		})
-    })
+    }]);
